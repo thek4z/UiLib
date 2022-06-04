@@ -1,3 +1,7 @@
+if game.CoreGui:FindFirstChild("JJPremium") then
+      game:CoreGui:FindFirstChild("JJPremium"):Destroy()
+end
+
 local WindowTable = {} -- We will be inserting Main Function in here
 
 function WindowTable:CreateWindow()
