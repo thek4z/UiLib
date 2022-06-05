@@ -194,10 +194,61 @@ UIVer.TextXAlignment = Enum.TextXAlignment.Right
     elementsListing.HorizontalAlignment = Enum.HorizontalAlignment.Center
     elementsListing.SortOrder = Enum.SortOrder.LayoutOrder
     elementsListing.Padding = UDim.new(0, 5)
+   
+   
+	local ElementHandler = {}
+	
+	function ElementHandler:CreateButton(BtnText, callback)   
+    btnText = btnText or "This Is Button"
+    callback = callback or function() end	
     
-end
+    local Button = Instance.new("TextButton")
+    local buttonCorner = Instance.new("UICorner")
+
+    Button.Name = "Button"
+    Button.Parent = newPage
+    Button.BackgroundColor3 = Color3.fromRGB(60, 108, 252)
+    Button.Size = UDim2.new(0, 300, 0, 30)
+    Button.Font = Enum.Font.GothamBold
+    Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+    Button.TextSize = 14.000
+    Button.Text = BtnText
+    Button.ZIndex = 1
+    Button.MouseButton1Click:Connect(function()
+	        callback()
+	end)
+
+    buttonCorner.CornerRadius = UDim.new(0, 5)
+    buttonCorner.Name = "buttonCorner"
+    buttonCorner.Parent = Button
+
+
+    local LabelHandler = {}
+    function LabelHandler:CreateLabel(LabelText)
     
-    return TabHandler
-end
- 
-return Library
+    local Label = Instance.new("TextLabel")
+    local labelCorner = Instance.new("UICorner")
+
+    Label.Name = "Label"
+    Label.Parent = newPage
+    Label.BackgroundColor3 = Color3.fromRGB(35, 66, 159)
+    Label.Position = UDim2.new(0.0426829271, 0, 0, 0)
+    Label.Size = UDim2.new(0, 300, 0, 30)
+    Label.Font = Enum.Font.GothamMedium
+    Label.TextColor3 = Color3.fromRGB(0, 0, 0)
+    Label.TextSize = 14.000
+    Label.Text = LabelText
+
+    labelCorner.CornerRadius = UDim.new(0, 3)
+    labelCorner.Name = "labelCorner"
+    labelCorner.Parent = Label
+
+
+                        end
+                    return LabelHandler
+		        end
+		      return ElementHandler
+	       end
+	   return TabHandler
+    end
+return WindowTable
