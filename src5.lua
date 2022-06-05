@@ -166,10 +166,11 @@ UIVer.TextXAlignment = Enum.TextXAlignment.Right
     tabButton.TextColor3 = Color3.fromRGB(255, 255, 255)
     tabButton.TextSize = 16.000
     tabButton.TextWrapped = true
-    for i,v in next, pagesFolder:GetChildren() do
-        v.Visible = false
-    end
-    newPage.Visible = true
+			for i,v in next, pagesFolder:GetChildren() do -- We get all the pages that we added
+				v.Visible = false	-- then we make them invisible 
+			end 
+			newPage.Visible = true	-- We make current page visible but not others
+		end)
 
     tabCorner.CornerRadius = UDim.new(0, 3)
     tabCorner.Name = "tabCorner"
