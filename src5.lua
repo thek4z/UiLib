@@ -170,7 +170,6 @@ UIVer.TextXAlignment = Enum.TextXAlignment.Right
 				v.Visible = false	-- then we make them invisible 
 			end 
 			newPage.Visible = true	-- We make current page visible but not others
-		end)
 
     tabCorner.CornerRadius = UDim.new(0, 3)
     tabCorner.Name = "tabCorner"
