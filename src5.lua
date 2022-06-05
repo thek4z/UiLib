@@ -137,8 +137,9 @@ uiName.TextXAlignment = Enum.TextXAlignment.Left
     newPage.Position = UDim2.new(0.000362234394, 0, 0, 0)
     newPage.Size = UDim2.new(0, 328, 0, 190)
     newPage.ScrollBarThickness = 5
-    newPage.Visible = false
-
+	newPage.Visible = false
+    newPage.ZIndex = 99
+    
     elementsListing.Name = "elementsListing"
     elementsListing.Parent = newPage
     elementsListing.HorizontalAlignment = Enum.HorizontalAlignment.Center
