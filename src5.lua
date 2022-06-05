@@ -1,7 +1,7 @@
 local Library = {}
 
 
-function Library:CreateWindow(LibraryName)
+function Library:CreateWindow(LibraryName, LibrarySideText, LibraryVersion)
 
 local JJPremium = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
@@ -16,6 +16,11 @@ local NameBar = Instance.new("Frame")
 local RoundNameBar = Instance.new("Frame")
 local NameBarCorner = Instance.new("UICorner")
 local uiName = Instance.new("TextLabel")
+local BelowNameBar = Instance.new("Frame")
+local BelowRoundNameBar = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local UIText = Instance.new("TextLabel")
+local UIVer = Instance.new("TextLabel")
 
 JJPremium.Name = "JJPremium"
 JJPremium.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -97,6 +102,48 @@ uiName.Text = LibraryName
 uiName.TextColor3 = Color3.fromRGB(255, 255, 255)
 uiName.TextSize = 16.000
 uiName.TextXAlignment = Enum.TextXAlignment.Left
+    
+BelowNameBar.Name = "BelowNameBar"
+BelowNameBar.Parent = MainFrame
+BelowNameBar.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+BelowNameBar.BorderSizePixel = 0
+BelowNameBar.Position = UDim2.new(0, 0, 0.968181789, 0)
+BelowNameBar.Size = UDim2.new(0, 519, 0, 22)
+
+BelowRoundNameBar.Name = "BelowRoundNameBar"
+BelowRoundNameBar.Parent = BelowNameBar
+BelowRoundNameBar.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+BelowRoundNameBar.BorderSizePixel = 0
+BelowRoundNameBar.Position = UDim2.new(0, 0, 0.622727811, 0)
+BelowRoundNameBar.Size = UDim2.new(0, 519, 0, 15)
+
+UICorner.Parent = BelowRoundNameBar
+
+UIText.Name = "UIText"
+UIText.Parent = BelowNameBar
+UIText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UIText.BackgroundTransparency = 1.000
+UIText.BorderSizePixel = 0
+UIText.Position = UDim2.new(0.0115606934, 0, 0, 0)
+UIText.Size = UDim2.new(0, 280, 0, 28)
+UIText.Font = Enum.Font.Code
+UIText.TextColor3 = Color3.fromRGB(162, 162, 162)
+UIText.TextSize = 14.000
+UIText.Text = LibrarySideText
+UIText.TextXAlignment = Enum.TextXAlignment.Left
+
+UIVer.Name = "UIText"
+UIVer.Parent = BelowNameBar
+UIVer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UIVer.BackgroundTransparency = 1.000
+UIVer.BorderSizePixel = 0
+UIVer.Position = UDim2.new(0.830443144, 0, 0, 0)
+UIVer.Size = UDim2.new(0, 69, 0, 28)
+UIVer.Font = Enum.Font.Code
+UIVer.TextColor3 = Color3.fromRGB(162, 162, 162)
+UIVer.TextSize = 14.000
+UIVer.Text = LibraryVersion
+UIVer.TextXAlignment = Enum.TextXAlignment.Right
 
 
     local TabHandler = {}
