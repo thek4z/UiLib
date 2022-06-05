@@ -129,7 +129,7 @@ uiName.TextXAlignment = Enum.TextXAlignment.Left
     tabCorner.Parent = tabButton
 
     newPage.Name = "newPage"
-    newPage.Parent = allPages
+    newPage.Parent = pagesFolder
     newPage.Active = true
     newPage.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
     newPage.BackgroundTransparency = 1.000
@@ -137,7 +137,7 @@ uiName.TextXAlignment = Enum.TextXAlignment.Left
     newPage.Position = UDim2.new(0.000362234394, 0, 0, 0)
     newPage.Size = UDim2.new(0, 328, 0, 190)
     newPage.ScrollBarThickness = 5
-	newPage.Visible = false
+    newPage.Visible = false
     newPage.ZIndex = 99
     
     elementsListing.Name = "elementsListing"
